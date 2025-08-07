@@ -343,13 +343,6 @@ We welcome contributions! Please feel free to submit a Pull Request.
 
 This tool is intended for research purposes only. Users are responsible for ensuring ethical and legal compliance when using this software. The authors do not condone malicious use of this technology.
 
-## 📞 Contact
-
-For questions or collaboration opportunities, please contact:
-
-- **Primary Author**: [Your Name] - [your.email@institution.edu]
-- **Project Page**: [https://your-project-page.com](https://your-project-page.com)
-
 ---
 
 **Note**: This research contributes to understanding multimodal model vulnerabilities and developing more robust AI safety mechanisms. Please use responsibly.
