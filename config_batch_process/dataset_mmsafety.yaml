@@ -1,0 +1,17 @@
+# config.yaml
+
+# 目标文件夹路径
+target_directory: "../config/"
+
+# 用于筛选 YAML 文件的多个字符串
+search_strings:
+  - "mmsafetybench"
+
+# 是否为每个修改的文件创建备份
+backup: false
+
+# 需要修改的键值对，以键路径为键，新的值为值
+modifications:
+  data_loader.dataset_name: 'mmsafetybench'
+  data_loader.dataset_path: '/workshop/crm/data/MM-SafetyBench'
+  data_loader.target_file_path: '/workshop/crm/project/IJTS/goals-and-targets_detailed.json'
