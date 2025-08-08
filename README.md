@@ -17,6 +17,12 @@ This repository contains the official implementation of JPS, a novel jailbreak m
 - **Comprehensive Evaluation**: Includes MIFR quality evaluation metrics
 - **Batch Processing Support**: Efficient configuration management and parallel execution
 
+## 🔄 Method Overview
+
+![JPS Method Overview](figs/Method.png)
+
+*Figure: Overview of the JPS (Jailbreak with Collaborative Visual Perturbation and Textual Steering) method framework. The approach combines visual perturbation optimization with multi-agent textual steering to generate high-quality responses from multimodal large language models.*
+
 ## 📋 Table of Contents
 
 - [Installation](#installation)
