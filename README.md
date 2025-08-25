@@ -265,9 +265,9 @@ Currently supported multimodal models:
 Supported evaluation datasets:
 
 - **AdvBench**: Standard jailbreak evaluation benchmark
-- **AdvBench-Subset**: 50-sample optimization subset
-- **MMSafetyBench**: Multimodal safety evaluation
-- **HarmBench**: Comprehensive harm evaluation
+- **AdvBench-Subset**: 50-sample optimization subset (available at [TAP Repository](https://github.com/RICommunity/TAP/blob/main/data/advbench_subset.csv))
+- **MMSafetyBench**: Multimodal safety evaluation (available at [MM-SafetyBench Repository](https://github.com/isXinLiu/MM-SafetyBench))
+- **HarmBench**: Comprehensive harm evaluation (available at [HarmBench Repository](https://github.com/centerforaisafety/HarmBench))
 
 ## 📈 Results
 
@@ -295,6 +295,10 @@ These files can be directly used for inference on new questions by:
 2. Prepending the steering prompt (`iteration5_.txt`) to your target questions
 
 ## 🔧 Advanced Usage
+
+### Target Generation for Custom Datasets
+
+We provide `goals-and-targets-detailed.json` in the main directory as an example of structured goal-target pairs. If you want to generate targets for your own dataset or questions, you can reference `goal_construction.py`.
 
 ### Custom Datasets
 
@@ -336,6 +340,19 @@ tail -f process_logs/latest.log
 - Use multiple GPUs with `run_config.py`
 - Adjust batch sizes based on available memory
 - Enable mixed precision for faster training
+
+## 📖 Citation
+
+If you find our work helpful, please consider citing our paper:
+
+```bibtex
+@article{chen2025jps,
+  title={JPS: Jailbreak Multimodal Large Language Models with Collaborative Visual Perturbation and Textual Steering},
+  author={Chen, Renmiao and Cui, Shiyao and Huang, Xuancheng and Pan, Chengwei and Huang, Victor Shea-Jay and Zhang, QingLin and Ouyang, Xuan and Zhang, Zhexin and Wang, Hongning and Huang, Minlie},
+  journal={arXiv preprint arXiv:2508.05087},
+  year={2025}
+}
+```
 
 ## 📝 License
 
