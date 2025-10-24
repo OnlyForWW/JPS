@@ -9,6 +9,8 @@ class PreprocessorFactory:
         model_name = config['model']['name']
         if model_name  == 'internvl2_8b':
             return Internvl28BPreprocessor(config['preprocessing'])
+        elif model_name == 'internvl3_8b':
+            return Internvl28BPreprocessor(config['preprocessing'])
         elif model_name == 'qwen2vl_7b':
             return Qwen2VL7BPreprocessor(config['preprocessing'])
         elif model_name == 'minigpt4_13b':

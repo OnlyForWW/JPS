@@ -38,8 +38,15 @@ class autodan_SuffixManager:
 
             # encoding = self.tokenizer(prompt)
             # toks = encoding.input_ids
-            if hasattr(self.conv_template, 'name') and self.conv_template.name=='internlm2-chat':
-            # if hasattr(self.conv_template, 'name') and self.conv_template.name=='internvl2_5':
+            template_name = getattr(self.conv_template, 'name', None)
+            if template_name in {
+                'internlm2-chat',
+                'internvl2_5',
+                'internvl3',
+                'internvl3-chat',
+                'internvl3_8b',
+                'internvl3-8b',
+            }:
                 self.conv_template.messages = []
                 sys_stop_pos = len(self.tokenizer(self.conv_template.get_prompt()).input_ids)
 
@@ -116,7 +123,7 @@ class autodan_SuffixManager:
 
             #     prompt = self.conv_template.get_prompt()
             
-            elif hasattr(self.conv_template, 'name') and self.conv_template.name=='minigpt4':
+            elif template_name == 'minigpt4':
                 self.conv_template.messages = []
                 sys_stop_pos = len(self.tokenizer(self.conv_template.get_prompt()).input_ids)
 
@@ -146,7 +153,8 @@ class autodan_SuffixManager:
                 import pdb;pdb.set_trace()
 
             else:
-                raise KeyError(f"Unknown conv_template version: {self.conv_template.version}")
+                version = getattr(self.conv_template, 'version', template_name)
+                raise KeyError(f"Unknown conv_template version: {version}")
             self.conv_template.messages = []
         else:
             

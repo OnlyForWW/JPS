@@ -9,6 +9,8 @@ class AttackFactory:
         model_name = config['model']['name']
         if model_name  == 'internvl2_8b':
             return  Internvl28BAttack(config, pipeline)
+        elif model_name == 'internvl3_8b':
+            return Internvl28BAttack(config, pipeline)
         elif model_name == 'llava_llama3':
             return LlavaLlama3Attack(config, pipeline)
         elif model_name == 'qwen2vl_7b':
